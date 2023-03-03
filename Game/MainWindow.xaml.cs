@@ -28,14 +28,14 @@ namespace Game
         public MainWindow()
         {
             InitializeComponent();
-            timer.Interval = TimeSpan.FromSeconds(1);
+            timer.Interval = TimeSpan.FromSeconds(.1);
             timer.Tick += Timer_Tick;
             SetUpGame();
         }
         private void Timer_Tick(Object sender,EventArgs e)
         {
             tenthsOfSecondsElapsed++;
-            timeTextBlock.Text=(tenthsOfSecondsElapsed/10F).ToString();
+            timeTextBlock.Text=(tenthsOfSecondsElapsed/10F).ToString("0.0s");
             if (matchesFound == 8)
             {
                 timer.Stop();
