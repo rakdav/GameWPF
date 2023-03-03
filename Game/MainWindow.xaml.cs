@@ -36,7 +36,7 @@ namespace Game
         {
             tenthsOfSecondsElapsed++;
             timeTextBlock.Text=(tenthsOfSecondsElapsed/10F).ToString();
-            if (matchesFound == 0)
+            if (matchesFound == 8)
             {
                 timer.Stop();
                 timeTextBlock.Text = timeTextBlock.Text + ". Играть заново";
